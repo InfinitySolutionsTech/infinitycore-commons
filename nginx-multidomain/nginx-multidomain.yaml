@@ -11,6 +11,7 @@ services:
     networks:
       - infra_storeprocloud_network
       - infra_admin_platform_network
+      - infra_security_network
 networks:
   infra_storeprocloud_network:
     external: true
@@ -18,3 +19,6 @@ networks:
   infra_admin_platform_network:
     external: true
     name: infra-admin-platform-network
+  infra_security_network:
+    external: true
+    name: infra-security-network
