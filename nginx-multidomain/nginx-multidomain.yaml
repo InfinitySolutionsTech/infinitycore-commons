@@ -5,6 +5,7 @@ services:
     container_name: commons-nginx-multidomain
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - /opt/certs:/certs:ro,Z
     ports:
       - "443:443"
     networks:
