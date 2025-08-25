@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  commons_nginx_multidomain:
+  service-commons-nginx-multidomain:
     image: docker.io/nginx:latest
     container_name: commons-nginx-multidomain
     volumes:
@@ -10,16 +10,16 @@ services:
     ports:
       - "443:443"
     networks:
-      - infra_storeprocloud_network
-      - infra_admin_platform_network
-      - infra_security_network
+      - infra-storeprocloud-network
+      - infra-admin-platform-network
+      - infra-security-network
 networks:
-  infra_storeprocloud_network:
+  infra-storeprocloud-network:
     external: true
     name: infra-storeprocloud-network
-  infra_admin_platform_network:
+  infra-admin-platform-network:
     external: true
     name: infra-admin-platform-network
-  infra_security_network:
+  infra-security-network:
     external: true
     name: infra-security-network
